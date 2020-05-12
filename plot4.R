@@ -21,9 +21,12 @@ if (!exists("HPC_days")){
 
 #Plotting and device creation
 
+#useful for displaying par args 
+#par("mar")
+
 png("plot4.png", width = 480, height = 480, units = "px")
 
-par(mfrow = c(2,2))
+par(mfrow = c(2,2), oma = c(1,0.2,0.2,0.2), mar = c(4,5,2,1.5))
 
 #1st plot
 plot(HPC_days$Date_Time,HPC_days$Global_active_power,
@@ -48,7 +51,7 @@ legend("topright", lty=rep(1,3),col=c("black","red","blue"),legend=c("Sub_meteri
 #4th plot
 plot(HPC_days$Date_Time, 
      HPC_days$Global_reactive_power, 
-     xlab = NA, 
+     xlab = "datatime", 
      ylab = "Global_reactive_power",
      type = 'l')
 
