@@ -1,5 +1,6 @@
 #Histogram
 
+library(dplyr)
 library(lubridate)
 file_name <- "household_power_consumption.txt"
 
